@@ -44,14 +44,14 @@ const App: React.FC = () => {
     }
 
   useEffect(() => {
-    const randomNumberString: string = randomNumberStringGenerator()
-    console.log(randomNumberString)  
+    const randomNumberString: string = randomNumberStringGenerator() 
     axios.get<any>(`https://rickandmortyapi.com/api/character/${randomNumberString}`)
       .then(response => setData(response.data))
       .catch(err => console.error(err))
   },[])
 
   const dataJsx = data.map((item: dataItem) => {
+    console.log(data)
     return (
     <div key={item.name} className='data-card'>
       <div className='image-container'>

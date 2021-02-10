@@ -18,9 +18,10 @@ main {
 }
 .data-grid {
   background: $dark-background;
-  width: 75%;
+  width: 66%;
   display: grid;
   grid-template-columns: 325px 325px 325px;
+  margin: 0 auto;
 }
 
 .data-card {
