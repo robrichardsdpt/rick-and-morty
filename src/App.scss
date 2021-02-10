@@ -11,6 +11,8 @@ main {
   background: $dark-background;
 }
 .title {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   background: $light-background;
 }
@@ -62,4 +64,7 @@ main {
 .sub-title {
   background: $dark-background;
   color: $orange-texts;
+  width: 50%;
+  margin-bottom: 25px;
+  transform: skewX(-20deg);
 }
