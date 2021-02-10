@@ -69,9 +69,7 @@ const App: React.FC = () => {
 
 
   const dataModified = sortData(data)
-  console.log(dataModified)
   const dataJsx = dataModified.map((item: dataItem) => {
-    console.log(data)
     return (
     <div key={item.name} className='data-card'>
       <div className='image-container'>
