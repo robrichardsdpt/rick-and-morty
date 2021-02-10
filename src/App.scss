@@ -60,11 +60,13 @@ main {
   opacity: .8;
   width: 300px;
 }
-
+.sub-title-container {
+  margin: auto;
+  width: 50%
+}
 .sub-title {
   background: $dark-background;
   color: $orange-texts;
-  width: 50%;
   margin-bottom: 25px;
   transform: skewX(-20deg);
 }

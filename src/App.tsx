@@ -89,7 +89,7 @@ const App: React.FC = () => {
     <main>
       <div className='title'>
         <h1>Rick and Morty</h1>
-        <div>
+        <div className='sub-title-container'>
           <h3 className='sub-title'>Hey, did you ever want to hold a Terry fold?</h3>
         </div>
       </div>
