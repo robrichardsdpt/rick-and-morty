@@ -15,8 +15,7 @@ $card-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
   background: $dark-background;
   width: 75%;
   display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 33% 33% 33%
+  grid-template-columns: 330px 330px 330px;
 }
 
 .data-card {
