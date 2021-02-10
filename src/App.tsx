@@ -63,23 +63,23 @@ const App: React.FC = () => {
       <div className='character-data'>
         <div className='character-data-item'>
           <div>STATUS</div>
-          <div>{item.status}</div>
+          <div className='data-content'>{item.status}</div>
         </div>
         <div className='character-data-item'>
           <div>SPECIES</div>
-          <div>{item.species}</div>
+          <div className='data-content'>{item.species}</div>
         </div>
         <div className='character-data-item'>
           <div>GENDER</div>
-          <div>{item.gender}</div>
+          <div className='data-content'>{item.gender}</div>
         </div>
         <div className='character-data-item'>
           <div>ORIGIN</div>
-          <div>{item.origin.name}</div>
+          <div className='data-content'>{item.origin.name}</div>
         </div>
         <div className='character-data-item'>
           <div>LAST LOCATION</div>
-          <div>{item.location.name}</div>
+          <div className='data-content'>{item.location.name}</div>
         </div>
       </div>
     </div>
@@ -88,9 +88,9 @@ const App: React.FC = () => {
   return (
     <main>
       <div className='title'>
-        <h1>Rick and Morty</h1>
+        <h1>RICK AND MORTY</h1>
         <div className='sub-title-container'>
-          <h3 className='sub-title'>Hey, did you ever want to hold a Terry fold?</h3>
+          <h3 className='sub-title'>HEY, DID YOU EVER WANT TO HOLD A TERRY FOLD?</h3>
         </div>
       </div>
       <div className='data-grid'>

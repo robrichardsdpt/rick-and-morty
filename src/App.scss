@@ -1,3 +1,5 @@
+@import "./fonts/fonts.css";
+
 $light-background: #FFFFFF;
 $dark-background: #202329;
 $dark-texts: rgb(51, 51, 51);
@@ -9,6 +11,11 @@ $card-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 
 html {
   background: $dark-background;
+}
+main {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
 }
 .title {
   display: flex;
@@ -50,6 +57,11 @@ html {
   padding: 10px;
   margin: 0 10px 10px 10px;
   border-bottom: 1px solid $light-texts;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  display: flex;
+  justify-content: space-between;
 }
 
 .name-container {
@@ -63,11 +75,15 @@ html {
 }
 .sub-title-container {
   margin: auto;
-  width: 50%
+  width: 50%;
+  transform: skewX(-20deg);
 }
 .sub-title {
   background: $dark-background;
   color: $orange-texts;
   margin-bottom: 25px;
-  transform: skewX(-20deg);
+}
+
+.data-content {
+  color: $orange-texts;
 }
