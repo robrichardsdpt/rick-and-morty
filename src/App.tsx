@@ -39,8 +39,28 @@ const App: React.FC = () => {
       }
       numArray.push(random)
       i--
+    }
+    return numArray.join(',')
+  }
+
+    const sortData = (array: any) => {
+      let noSwaps
+      for(let i = array.length; i > 0; i--){
+        noSwaps = true
+      for (let j = 0; j < i - 1; j++) {
+        let string1 = array[j].episode[array[j].episode.length - 1]
+        let string2 = array[j+1].episode[array[j+1].episode.length - 1]
+        if(string1.length > string2.length ) {
+          [array[j], array[j+1]] = [array[j+1], array[j]]
+          noSwaps = false
+        } else if(string1 > string2) {
+          [array[j], array[j+1]] = [array[j+1], array[j]]
+          noSwaps = false
+        }
       }
-      return numArray.join(',')
+      if(noSwaps) break
+      } 
+    return array.reverse()
     }
 
   useEffect(() => {
@@ -50,6 +70,9 @@ const App: React.FC = () => {
       .catch(err => console.error(err))
   },[])
 
+
+  const dataModified = sortData(data)
+  console.log(dataModified)
   const dataJsx = data.map((item: dataItem) => {
     console.log(data)
     return (
