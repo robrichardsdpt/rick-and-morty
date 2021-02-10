@@ -44,13 +44,15 @@ const App: React.FC = () => {
   }
 
     const sortData = (array: any) => {
+      // last episode in array of episodes is the latest episode
       let noSwaps
       for(let i = array.length; i > 0; i--){
         noSwaps = true
       for (let j = 0; j < i - 1; j++) {
         let string1 = array[j].episode[array[j].episode.length - 1]
         let string2 = array[j+1].episode[array[j+1].episode.length - 1]
-        if(string1.length > string2.length ) {
+        // checks for extra digit, if has extra digit will be larger
+        if(string1.length > string2.length) {
           [array[j], array[j+1]] = [array[j+1], array[j]]
           noSwaps = false
         } else if(string1 > string2) {
