@@ -27,6 +27,10 @@ main {
   margin: 10px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
 
+  .image-container {
+    position: relative;
+  }
+
   img {
     border-radius: 10px 10px 0px 0px;
     object-fit: cover;
@@ -41,12 +45,18 @@ main {
   background: $card-background;
   color: $light-texts;
   padding: 10px;
-  margin: 10px;
+  margin: 0 10px 10px 10px;
   border-bottom: 1px solid $light-texts;
 }
 
 .name-container {
   color: $light-texts;
+  position: absolute;
+  top: 245px;
+  padding-left: 20px;
+  background:#202329;
+  opacity: .9;
+  width: 300px;
 }
 
 .sub-title {
