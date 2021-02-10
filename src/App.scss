@@ -21,6 +21,7 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 2em;
   background: $light-background;
 }
 .data-grid {
@@ -80,7 +81,9 @@ main {
 .sub-title-container {
   margin: auto;
   width: 50%;
+  font-size: 1rem;
   transform: skewX(-20deg);
+  margin-top: -79px;
 }
 .sub-title {
   background: $dark-background;
