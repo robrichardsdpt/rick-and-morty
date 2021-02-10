@@ -26,15 +26,31 @@ interface dataItem {
 const App: React.FC = () => {
   const [data, setData] = useState<dataItem[]>([])
 
+  const randomNumberStringGenerator = () => {
+    let i = 20
+    const numArray = []
+    while (i > 0) {
+      let num: number
+      let random: number = Math.floor(Math.random() * 671)
+      for(num of numArray) {
+        if(random === num){
+          break
+        }
+      }
+      numArray.push(random)
+      i--
+      }
+      return numArray.join(',')
+    }
+
   useEffect(() => {
-    const random:number = Math.floor(Math.random() * 651)
-    const randomTopRange: number = random + 20
-    axios.get<any>(`https://rickandmortyapi.com/api/character/${random},${randomTopRange}`)
+    const randomNumberString: string = randomNumberStringGenerator()
+    console.log(randomNumberString)  
+    axios.get<any>(`https://rickandmortyapi.com/api/character/${randomNumberString}`)
       .then(response => setData(response.data))
       .catch(err => console.error(err))
   },[])
 
-  
   const dataJsx = data.map((item: dataItem) => {
     return (
     <div key={item.name} className='data-card'>
