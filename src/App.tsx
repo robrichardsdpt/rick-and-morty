@@ -45,22 +45,17 @@ const App: React.FC = () => {
 
     const sortData = (array: any) => {
       // last episode in array of episodes is the latest episode
-      let noSwaps
       for(let i = array.length; i > 0; i--){
-        noSwaps = true
       for (let j = 0; j < i - 1; j++) {
         let string1 = array[j].episode[array[j].episode.length - 1]
         let string2 = array[j+1].episode[array[j+1].episode.length - 1]
         // checks for extra digit, if has extra digit will be larger
         if(string1.length > string2.length) {
           [array[j], array[j+1]] = [array[j+1], array[j]]
-          noSwaps = false
         } else if(string1 > string2) {
           [array[j], array[j+1]] = [array[j+1], array[j]]
-          noSwaps = false
         }
       }
-      if(noSwaps) break
       } 
     return array.reverse()
     }
@@ -75,7 +70,7 @@ const App: React.FC = () => {
 
   const dataModified = sortData(data)
   console.log(dataModified)
-  const dataJsx = data.map((item: dataItem) => {
+  const dataJsx = dataModified.map((item: dataItem) => {
     console.log(data)
     return (
     <div key={item.name} className='data-card'>
