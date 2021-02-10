@@ -29,9 +29,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const random:number = Math.floor(Math.random() * 651)
     const randomTopRange: number = random + 20
-    const randomArray = (random, randomTopRange) => Array.from({length:RandomTopRange-random},(v, random)=>random+1)
-    console.log(randomArray)
-    axios.get<any>(`https://rickandmortyapi.com/api/character/${random},20`)
+    axios.get<any>(`https://rickandmortyapi.com/api/character/${random},${randomTopRange}`)
       .then(response => setData(response.data))
       .catch(err => console.error(err))
   },[])
