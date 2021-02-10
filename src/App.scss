@@ -1,0 +1,47 @@
+$light-background: #FFFFFF;
+$dark-background: #202329;
+$dark-texts: rgb(51, 51, 51);
+$light-texts: rgb(158, 158, 158);
+$orange-texts: rgb(255, 152, 0);
+$card-title: rgb(245, 245, 245);
+$card-background: rgb(51, 51, 51);
+$card-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+.title {
+  text-align: center;
+  background: $light-background;
+}
+.data-grid {
+  background: $dark-background;
+  width: 75%;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 33% 33% 33%
+}
+
+.data-card {
+  border: 2px solid gray;
+  border-radius: 15px;
+  margin: 10px;
+
+  img {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+}
+
+.character-data-item {
+  background: $card-background;
+  color: $light-texts;
+  padding: 10px;
+  border-bottom: 1px solid $light-texts;
+}
+
+.name-container {
+  color: $light-texts;
+}
+
+.sub-title {
+  background: $dark-background;
+  color: $orange-texts;
+}
