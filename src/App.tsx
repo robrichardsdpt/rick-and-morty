@@ -34,6 +34,7 @@ const App: React.FC = () => {
       let random: number = Math.floor(Math.random() * 671)
       for(num of numArray) {
         if(random === num){
+          i++
           break
         }
       }
@@ -45,17 +46,18 @@ const App: React.FC = () => {
 
     const sortData = (array: any) => {
       // last episode in array of episodes is the latest episode
-      for(let i = array.length; i > 0; i--){
-      for (let j = 0; j < i - 1; j++) {
-        let string1 = array[j].episode[array[j].episode.length - 1]
-        let string2 = array[j+1].episode[array[j+1].episode.length - 1]
-        // checks for extra digit, if has extra digit will be larger
-        if(string1.length > string2.length) {
-          [array[j], array[j+1]] = [array[j+1], array[j]]
-        } else if(string1 > string2) {
-          [array[j], array[j+1]] = [array[j+1], array[j]]
+      for(let i = 0; i < array.length; i++){
+        for (let j = 0; j < array.length - 1; j++) {
+          let string1 = array[j].episode[array[j].episode.length - 1]
+          let string2 = array[j+1].episode[array[j+1].episode.length - 1]
+          // checks for extra digit, if has extra digit will be larger
+          console.log(string1)
+          if(string1.length > string2.length) {
+            [array[j], array[j+1]] = [array[j+1], array[j]]
+          } else if(string1 > string2) {
+            [array[j], array[j+1]] = [array[j+1], array[j]]
+          }
         }
-      }
       } 
     return array.reverse()
     }
@@ -69,9 +71,10 @@ const App: React.FC = () => {
 
 
   const dataModified = sortData(data)
+  console.log(dataModified)
   const dataJsx = dataModified.map((item: dataItem) => {
     return (
-    <div key={item.name} className='data-card'>
+    <div key={item.id} className='data-card'>
       <div className='image-container'>
         <img src={item.image} alt={item.name} />
         <div className='name-container'>
