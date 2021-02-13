@@ -16,7 +16,7 @@ main {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
-}
+} 
 .title {
   display: flex;
   flex-direction: column;
@@ -29,6 +29,7 @@ main {
   background: $dark-background;
   width: 66%;
   display: grid;
+  justify-content: space-evenly;
   grid-template-columns: 325px 325px 325px;
   margin: 0 auto;
   margin-top: 20px;
