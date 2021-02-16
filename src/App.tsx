@@ -114,7 +114,7 @@ const App: React.FC = () => {
   return (
     <main>
       <div className='title'>
-        <h1>RICK AND MOM</h1>
+        <h1>RICK AND MORTY</h1>
         <div className='sub-title-container'>
           <h3 className='sub-title'>HEY, DID YOU EVER WANT TO HOLD A TERRY FOLD?</h3>
         </div>
